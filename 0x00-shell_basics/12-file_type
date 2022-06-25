@@ -1,1 +1,2 @@
-#!/bin/bash cat /tmp/iamafile | type | pr | lpr
+#!/bin/bsh
+file /tmp/iamafile
