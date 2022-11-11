@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script is displaying content of the present working directory with a modified output
+
+ls | sed -e 's/^.*-//'
+
