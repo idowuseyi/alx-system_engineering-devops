@@ -4,12 +4,13 @@
 FILE=School
 if [[ -e "$FILE" ]]; then
 	    echo "$FILE file exists."
-	    if [[ -f "$FILE" ]]; then
-		    echo "$FILE is a regular file"
-	    elif [[ -s "$FILE" ]]; then
+	    if [[ -s "$FILE" ]]; then
 		    echo "$FILE file is not empty"
 	    else
-		    echo "$FILE school file is empty"
+		    echo "$FILE file is empty"
+	    fi
+	    if [[ -f "$FILE" ]]; then
+		    echo "$FILE is a regular file"
 	    fi
     else
 	    echo "$FILE file does not exist"
