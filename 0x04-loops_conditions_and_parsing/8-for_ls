@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # This script is displaying content of the present working directory with a modified output
+#ls | sed -e 's/^.*-//'
 
-ls | sed -e 's/^.*-//'
-
+lst=$(ls)
+for i in $lst; do
+  echo "$i" | cut -d '-' -f2
+done
