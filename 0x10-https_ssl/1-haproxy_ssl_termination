@@ -33,14 +33,6 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend myfrontend
-	bind *:80
-	bind *:443 ssl crt /etc/haproxy/certs/www.idowuseyi.tech.pem
-	http-request redirect scheme https code 301 if { hdr(Host) -i www.idowuseyi.tech } !{ ssl_fc }
-	default_backend myservers
-
-backend myservers
-
 listen http-in
 	bind :80
 	balance roundrobin
