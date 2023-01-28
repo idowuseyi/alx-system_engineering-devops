@@ -33,12 +33,9 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend myfrontend
-	bind *:80
-	bind *:443 ssl crt /etc/haproxy/certs/www.uniqueel.tech.pem
-	default_backend myservers
-
-backend myservers
+listen http-in
+	bind :80
 	balance roundrobin
-	server web-01 35.175.63.33:80 check
-	server web-02 54.160.115.199:80 check
+	server 75346-web-01 35.175.63.33:80 check
+	server 75346-web-02 54.160.115.199:80 check
+
