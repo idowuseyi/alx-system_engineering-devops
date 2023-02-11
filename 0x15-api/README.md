@@ -1,3 +1,3 @@
-# 0x15-api
+# API
 Author: Oluwaseyi Idowu
 email: idowuseyi22@gmail.com
